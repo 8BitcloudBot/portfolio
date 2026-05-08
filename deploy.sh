@@ -47,7 +47,7 @@ case "$ENV" in
         REMOTE_PATH="/var/www/vincentbuilds"
         ;;
     "github")
-        log "部署到 GitHub Pages (pokerfacewen.github.io/portfolio)"
+        log "部署到 GitHub Pages (8bitcloudbot.github.io/portfolio)"
         export ASTRO_ENV=github
         REMOTE_PATH="dist"
         ;;
@@ -172,7 +172,7 @@ case "$ENV" in
         fi
         
         log "=== 三端同步部署完成 ==="
-        info "GitHub Pages: https://pokerfacewen.github.io/portfolio/"
+        info "GitHub Pages: https://8bitcloudbot.github.io/portfolio/"
         info "阿里云生产: https://vincentbuilds.fun"
         ;;
 esac

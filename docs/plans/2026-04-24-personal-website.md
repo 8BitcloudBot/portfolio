@@ -138,7 +138,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://pokerfacewen.github.io',
+  site: 'https://8bitcloudbot.github.io',
   base: '/portfolio',
   output: 'static',
   integrations: [
@@ -308,18 +308,18 @@ export default {
 
 ```typescript
 export const SITE = {
-  title: "PokerFaceWen",
+  title: "8BitcloudBot",
   description: "A fanatical open sourceror and design engineer.",
-  author: "PokerFaceWen",
+  author: "8BitcloudBot",
   email: "17889786156@163.com",
-  github: "https://github.com/PokerFaceWen",
+  github: "https://github.com/8BitcloudBot",
   nav: [
     { name: "Blog", path: "/blog", icon: "article" },
     { name: "Projects", path: "/projects", icon: "lightbulb" },
     { name: "About", path: "/about", icon: "user" },
   ],
   social: [
-    { name: "GitHub", url: "https://github.com/PokerFaceWen", icon: "github" },
+    { name: "GitHub", url: "https://github.com/8BitcloudBot", icon: "github" },
   ],
 };
 ```
@@ -474,7 +474,7 @@ const year = new Date().getFullYear();
 ---
 
 <div class="mt-10 mb-6 max-w-prose mx-auto flex slide-enter animate-delay-1200!">
-  <span class="text-sm opacity-50">&copy; 2024-{year} PokerFaceWen</span>
+  <span class="text-sm opacity-50">&copy; 2024-{year} 8BitcloudBot</span>
   <div class="flex-auto"></div>
 </div>
 ```
@@ -605,7 +605,7 @@ import { SITE } from '../config';
     <div class="mb-8">
       <h1 class="text-4xl font-bold font-condensed mb-4">Hey!</h1>
       <p class="text-lg leading-8 opacity-80">
-        I'm <span class="font-semibold opacity-100">PokerFaceWen</span>, a passionate developer who loves building things for the web.
+        I'm <span class="font-semibold opacity-100">8BitcloudBot</span>, a passionate developer who loves building things for the web.
       </p>
       <p class="text-lg leading-8 opacity-80 mt-4">
         I enjoy exploring new technologies, writing code, and sharing what I learn.
@@ -796,7 +796,7 @@ import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
 ---
 
-<BaseLayout title="Blog | PokerFaceWen" description="Blog posts about coding, open source, and more.">
+<BaseLayout title="Blog | 8BitcloudBot" description="Blog posts about coding, open source, and more.">
   <BlogList posts={posts} />
 </BaseLayout>
 ```
@@ -825,7 +825,7 @@ const formattedDate = date.toLocaleDateString(lang === 'zh' ? 'zh-CN' : 'en-US',
 });
 ---
 
-<BaseLayout title={`${title} | PokerFaceWen`}>
+<BaseLayout title={`${title} | 8BitcloudBot`}>
   <article class="max-w-prose mx-auto animate-slide-enter">
     <header class="mb-8">
       <h1 class="text-3xl font-bold font-condensed mb-3">{title}</h1>
@@ -913,7 +913,7 @@ title: "Portfolio Website"
 description: "My personal website built with Astro, React, and Tailwind CSS."
 pubDate: 2026-04-24
 tags: ["Astro", "React", "Tailwind CSS", "TypeScript"]
-github: "https://github.com/PokerFaceWen/portfolio"
+github: "https://github.com/8BitcloudBot/portfolio"
 ---
 
 A personal website for showcasing blog posts and projects. Built with modern web technologies for optimal performance and developer experience.
@@ -995,7 +995,7 @@ import { getCollection } from 'astro:content';
 const projects = await getCollection('projects');
 ---
 
-<BaseLayout title="Projects | PokerFaceWen" description="Projects I've built and maintained.">
+<BaseLayout title="Projects | 8BitcloudBot" description="Projects I've built and maintained.">
   <ProjectList projects={projects} />
 </BaseLayout>
 ```
@@ -1060,13 +1060,13 @@ import Icon from '../components/icons/Icon.astro';
 import { SITE } from '../config';
 ---
 
-<BaseLayout title="About | PokerFaceWen" description="About me.">
+<BaseLayout title="About | 8BitcloudBot" description="About me.">
   <div class="max-w-prose mx-auto animate-slide-enter">
     <h1 class="text-3xl font-bold font-condensed mb-6">About Me</h1>
 
     <div class="prose-custom">
       <p>
-        Hey! I'm <strong>PokerFaceWen</strong>, a passionate developer who loves building things for the web.
+        Hey! I'm <strong>8BitcloudBot</strong>, a passionate developer who loves building things for the web.
       </p>
       <p>
         I enjoy exploring new technologies, solving problems, and sharing what I learn with the community.
@@ -1202,7 +1202,7 @@ git push origin main
 
 - [ ] **Step 3: 验证线上访问**
 
-访问 https://pokerfacewen.github.io/portfolio/ 确认所有页面正常
+访问 https://8bitcloudbot.github.io/portfolio/ 确认所有页面正常
 
 - [ ] **Step 4: 同步到阿里云服务器**
 

@@ -138,7 +138,7 @@ npm run build
 ### 部署到 GitHub Pages：
 1. 推送代码到 GitHub 仓库
 2. GitHub Actions 会自动构建并部署
-3. 访问 `https://pokerfacewen.github.io/portfolio/`
+3. 访问 `https://8bitcloudbot.github.io/portfolio/`
 
 ## 7. 常见问题
 

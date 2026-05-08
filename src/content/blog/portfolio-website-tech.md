@@ -130,7 +130,7 @@ npm run build
 
 # 部署到 GitHub Pages
 # 推送代码到 GitHub，GitHub Actions 自动部署
-# 访问 https://pokerfacewen.github.io/portfolio/
+# 访问 https://8bitcloudbot.github.io/portfolio/
 ```
 
 ## 技术亮点
@@ -173,4 +173,4 @@ npm run build
 
 **技术栈**：Astro 6.x + React 19 + Tailwind CSS 4.x + MDX
 **部署**：GitHub Pages + GitHub Actions
-**访问地址**：https://pokerfacewen.github.io/portfolio/
+**访问地址**：https://8bitcloudbot.github.io/portfolio/

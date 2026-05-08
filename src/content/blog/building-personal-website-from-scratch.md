@@ -106,7 +106,7 @@ lang: "zh"
 
 ### 实际操作记录
 
-1. **Git 用户信息**：已配置（PokerFaceWen / 17889786156@163.com）
+1. **Git 用户信息**：已配置（8BitcloudBot / 17889786156@163.com）
 2. **SSH Key 生成**：`ssh-keygen -t ed25519`，一路回车使用默认值
 3. **SSH 公钥添加到 GitHub**：Settings → SSH and GPG keys → New SSH Key
 4. **SSH 连接验证**：`ssh -T git@github.com`，首次连接需输入 `yes` 确认主机指纹
@@ -267,7 +267,7 @@ firewall-cmd --reload
 gh repo create portfolio --public --source=. --push
 ```
 
-仓库地址：`git@github.com:PokerFaceWen/portfolio.git`
+仓库地址：`git@github.com:8BitcloudBot/portfolio.git`
 
 ### 2. Astro 配置
 
@@ -276,7 +276,7 @@ gh repo create portfolio --public --source=. --push
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://pokerfacewen.github.io',
+  site: 'https://8bitcloudbot.github.io',
   base: '/portfolio',
   output: 'static',
 });
@@ -353,7 +353,7 @@ Error: Failed to create deployment (status: 404)
 
 修复：通过 GitHub API 设置 `build_type` 为 `workflow`：
 ```bash
-gh api repos/PokerFaceWen/portfolio/pages -X PUT -f build_type=workflow
+gh api repos/8BitcloudBot/portfolio/pages -X PUT -f build_type=workflow
 ```
 
 **坑 2：部署失败 — 环境保护规则**
@@ -366,7 +366,7 @@ Branch "main" is not allowed to deploy to github-pages due to environment protec
 
 修复：通过 API 添加 `main` 分支的部署权限：
 ```bash
-gh api repos/PokerFaceWen/portfolio/environments/github-pages/deployment-branch-policies -X POST -f name=main
+gh api repos/8BitcloudBot/portfolio/environments/github-pages/deployment-branch-policies -X POST -f name=main
 ```
 
 **坑 3：Node.js 20 弃用警告**
@@ -379,7 +379,7 @@ Node.js 20 actions are deprecated. Actions will be forced to run with Node.js 24
 
 ### 6. 最终验证
 
-部署成功后访问 `https://pokerfacewen.github.io/portfolio/`，页面正常显示。
+部署成功后访问 `https://8bitcloudbot.github.io/portfolio/`，页面正常显示。
 
 ---
 
@@ -395,7 +395,7 @@ Node.js 20 actions are deprecated. Actions will be forced to run with Node.js 24
 GitHub Actions 自动触发
   ↓
   ├──→ GitHub Pages（海外线路）
-  │     URL: https://pokerfacewen.github.io/portfolio/
+  │     URL: https://8bitcloudbot.github.io/portfolio/
   │     自动 HTTPS，自动部署
   │
   └──→ 阿里云轻量服务器（国内线路）
@@ -413,7 +413,7 @@ GitHub Actions 自动触发
 GitHub Actions 自动触发
   ↓
   ├──→ GitHub Pages（海外线路）
-  │     URL: https://pokerfacewen.github.io/portfolio/
+  │     URL: https://8bitcloudbot.github.io/portfolio/
   │
   └──→ rsync 同步到阿里云服务器
         ↓
@@ -427,7 +427,7 @@ GitHub Actions 自动触发
 ```
 yourdomain.com
   ├── 国内线路 → A 记录 → 阿里云服务器 IP
-  └── 海外线路 → CNAME → pokerfacewen.github.io
+  └── 海外线路 → CNAME → 8bitcloudbot.github.io
 ```
 
 ---
@@ -508,7 +508,7 @@ yourdomain.com
 | Git 推送到 GitHub | ✅ | SSH 连接正常 |
 | GitHub Actions 自动构建 | ✅ | build ✅ |
 | GitHub Pages 部署成功 | ✅ | Deploy ✅ |
-| 线上 URL 可访问 | ✅ | pokerfacewen.github.io/portfolio/ |
+| 线上 URL 可访问 | ✅ | 8bitcloudbot.github.io/portfolio/ |
 | 阿里云服务器 Nginx | ✅ | http://服务器IP 可访问 |
 | 代码变更自动部署 | ✅ | push → Actions → Pages 自动更新 |
 

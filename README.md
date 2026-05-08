@@ -3,7 +3,7 @@
 Personal website built with **Astro**, **React**, **Tailwind CSS**, and **MDX**.
 
 - 🏠 **Production**: [vincentbuilds.fun](https://vincentbuilds.fun)
-- 📦 **GitHub Pages**: [pokerfacewen.github.io/portfolio](https://pokerfacewen.github.io/portfolio)
+- 📦 **GitHub Pages**: [8bitcloudbot.github.io/portfolio](https://8bitcloudbot.github.io/portfolio)
 
 ## Tech Stack
 
@@ -59,7 +59,7 @@ This project supports three-environment deployment:
 | Environment | URL | Trigger |
 |-------------|-----|---------|
 | **Local** | `http://localhost:4321` | `npm run dev` |
-| **GitHub Pages** | `https://pokerfacewen.github.io/portfolio` | `npm run deploy:github` or git push |
+| **GitHub Pages** | `https://8bitcloudbot.github.io/portfolio` | `npm run deploy:github` or git push |
 | **Alibaba Cloud** | `https://vincentbuilds.fun` | `npm run deploy:production` |
 
 For detailed deployment instructions, see [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md).

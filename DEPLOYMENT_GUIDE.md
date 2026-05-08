@@ -9,7 +9,7 @@
 | 环境 | 域名 | 用途 | 构建命令 |
 |------|------|------|----------|
 | **阿里云生产** | `https://vincentbuilds.fun` | 正式网站 | `npm run build:production` |
-| **GitHub Pages** | `https://pokerfacewen.github.io/portfolio` | 备份/演示 | `npm run build:github` |
+| **GitHub Pages** | `https://8bitcloudbot.github.io/portfolio` | 备份/演示 | `npm run build:github` |
 | **本地开发** | `http://localhost:4321` | 开发测试 | `npm run dev` |
 
 ## 🚀 快速开始
@@ -137,7 +137,7 @@ const environments = {
     output: 'static'
   },
   github: {
-    site: 'https://pokerfacewen.github.io',
+    site: 'https://8bitcloudbot.github.io',
     base: '/portfolio',
     output: 'static'
   },

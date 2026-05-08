@@ -13,7 +13,7 @@ const environments = {
     output: 'static' as const
   },
   github: {
-    site: 'https://pokerfacewen.github.io',
+    site: 'https://8bitcloudbot.github.io',
     base: '/portfolio',
     output: 'static' as const
   },

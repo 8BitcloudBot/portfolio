@@ -13,7 +13,7 @@ tags: ["网站运维", "Astro", "Nginx", "GitHub Pages", "uv"]
 ### 网站信息
 - **域名**：
   - 自定义域名：https://vincentbuilds.fun
-  - GitHub Pages：https://pokerfacewen.github.io/portfolio/
+  - GitHub Pages：https://8bitcloudbot.github.io/portfolio/
 - **技术栈**：
   - Astro 6.x（静态站点生成器）
   - React 19（交互组件）
@@ -224,7 +224,7 @@ uv cache remove requests
 GitHub Actions 自动触发
   ↓
   ├──→ GitHub Pages（海外线路）
-  │     URL: https://pokerfacewen.github.io/portfolio/
+  │     URL: https://8bitcloudbot.github.io/portfolio/
   │
   └──→ 阿里云轻量服务器（国内线路）
         URL: https://vincentbuilds.fun
@@ -242,7 +242,7 @@ git push origin main
 
 推送后 GitHub Actions 会自动执行：
 - 构建站点 → 部署到 GitHub Pages（约 1-2 分钟）
-- 访问：https://pokerfacewen.github.io/portfolio/
+- 访问：https://8bitcloudbot.github.io/portfolio/
 
 ### 阿里云服务器部署（手动）
 
@@ -263,8 +263,8 @@ rsync -avz --delete dist/ root@your-server-ip:/var/www/vincentbuilds/
 
 ```bash
 # 查看 GitHub Actions 运行状态
-gh run list --workflow="deploy.yml" -R PokerFaceWen/portfolio
-gh run view <run-id> -R PokerFaceWen/portfolio
+gh run list --workflow="deploy.yml" -R 8BitcloudBot/portfolio
+gh run view <run-id> -R 8BitcloudBot/portfolio
 
 # 检查服务器 Nginx 状态
 ssh root@your-server-ip 'systemctl status nginx'
@@ -423,10 +423,10 @@ systemctl restart sshd
 
 ```bash
 # 查看最近运行记录
-gh run list --workflow="deploy.yml" -R PokerFaceWen/portfolio
+gh run list --workflow="deploy.yml" -R 8BitcloudBot/portfolio
 
 # 查看失败日志
-gh run view <run-id> --log-failed -R PokerFaceWen/portfolio
+gh run view <run-id> --log-failed -R 8BitcloudBot/portfolio
 
 # 常见原因：
 # - 构建错误（检查 npm run build 输出）

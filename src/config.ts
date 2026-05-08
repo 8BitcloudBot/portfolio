@@ -6,7 +6,7 @@ export const SITE = {
   description: "A passionate developer who loves building things for the web.",
   author: "Vincent Hu",
   email: "17889786156@163.com",
-  github: "https://github.com/PokerFaceWen",
+  github: "https://github.com/8BitcloudBot",
   nav: [
     { name: "Blog", path: `${base}blog`, icon: "article" },
     { name: "Projects", path: `${base}projects`, icon: "lightbulb" },
@@ -14,6 +14,6 @@ export const SITE = {
     { name: "About", path: `${base}about`, icon: "user" },
   ],
   social: [
-    { name: "GitHub", url: "https://github.com/PokerFaceWen", icon: "github" },
+    { name: "GitHub", url: "https://github.com/8BitcloudBot", icon: "github" },
   ],
 };
