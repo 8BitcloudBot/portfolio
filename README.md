@@ -1,11 +1,24 @@
-# Vincent Hu
+# Vincent Hu - Portfolio
 
-Personal website built with **Astro**, **React**, **Tailwind CSS**, and **MDX**.
+Personal website and blog built with **Astro**, **React**, **Tailwind CSS**, and **MDX**.
 
-- 🏠 **Production**: [vincentbuilds.fun](https://vincentbuilds.fun)
-- 📦 **GitHub Pages**: [8bitcloudbot.github.io/portfolio](https://8bitcloudbot.github.io/portfolio)
+## 🚀 Live Demo
 
-## Tech Stack
+| Environment | URL |
+|-------------|-----|
+| **Production** | [vincentbuilds.fun](https://vincentbuilds.fun) |
+| **GitHub Pages** | [8bitcloudbot.github.io/portfolio](https://8bitcloudbot.github.io/portfolio) |
+
+## ✨ Features
+
+- **Blog** - Markdown/MDX blog with syntax highlighting
+- **Projects** - Showcase portfolio projects with detailed pages
+- **Photos** - Image gallery
+- **Dark Mode** - Theme toggle with system preference detection
+- **SEO Optimized** - Sitemap, meta tags, structured data
+- **Responsive** - Mobile-first design
+
+## 🛠️ Tech Stack
 
 | Category | Technology |
 |----------|-----------|
@@ -16,7 +29,23 @@ Personal website built with **Astro**, **React**, **Tailwind CSS**, and **MDX**.
 | Sitemap | [@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/) |
 | Deployment | Nginx + GitHub Pages + GitHub Actions |
 
-## Project Structure
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/8BitcloudBot/portfolio.git
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+Visit `http://localhost:4321` to see the site.
+
+## 📁 Project Structure
 
 ```
 WebPage/
@@ -41,18 +70,18 @@ WebPage/
 └── deploy.env          # Alibaba Cloud deploy config (gitignored)
 ```
 
-## Commands
+## ⚡ Commands
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Start local dev server |
+| `npm run dev` | Start local dev server at `localhost:4321` |
 | `npm run build` | Build for production |
-| `npm run preview` | Preview the build |
+| `npm run preview` | Preview the production build locally |
 | `npm run deploy:github` | Deploy to GitHub Pages |
 | `npm run deploy:production` | Deploy to Alibaba Cloud server |
 | `npm run deploy:all` | Deploy to all environments |
 
-## Deployment
+## 🚀 Deployment
 
 This project supports three-environment deployment:
 
@@ -64,3 +93,11 @@ This project supports three-environment deployment:
 
 For detailed deployment instructions, see [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md).
 For site operations guide, see [OPERATIONS_GUIDE.md](./OPERATIONS_GUIDE.md).
+
+## 📄 License
+
+MIT License - feel free to use this project as a template for your own portfolio.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.

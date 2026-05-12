@@ -8,16 +8,27 @@ tags: ["前端", "Astro", "React", "Tailwind CSS"]
 
 # 个人作品集网站技术实现
 
-本文介绍如何使用现代前端技术栈构建一个美观、高效的个人作品集网站。
+> 从零构建一个现代化的个人作品集网站，使用 Astro、React、Tailwind CSS 等技术栈。
+
+## 目录
+
+- [技术栈选择](#技术栈选择)
+- [项目结构](#项目结构)
+- [核心功能实现](#核心功能实现)
+- [部署方案](#部署方案)
+
+---
 
 ## 技术栈选择
 
 ### 核心框架
+
 - **Astro 6.x**：现代化的静态站点生成器，支持 Partial Hydration（部分水合），实现首屏快速加载
 - **React 19**：用于构建交互式组件，如主题切换开关
 - **Tailwind CSS 4.x**：实用优先的 CSS 框架，简化样式开发
 
 ### 辅助工具
+
 - **MDX**：支持在 Markdown 中使用 React 组件
 - **Shiki**：代码语法高亮
 - **GitHub Actions**：CI/CD 自动化部署
@@ -68,109 +79,91 @@ WebPage/
 
 ### 3. 内容管理系统
 
-使用 Astro 的 Content Layer API 管理博客和项目内容：
+使用 Astro 的内容集合（Content Collections）管理博客和项目：
 
-- **类型安全**：使用 TypeScript 接口定义内容结构
-- **自动扫描**：文件系统即 CMS，添加文件即可发布
-- **MDX 支持**：在 Markdown 中使用 React 组件
+```typescript
+// src/content/config.ts
+import { defineCollection, z } from 'astro:content';
 
-### 4. 照片/壁纸库
+const blogCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.date(),
+    tags: z.array(z.string()),
+  }),
+});
 
-- **自动扫描**：使用 `import.meta.glob` 自动扫描 `public/photos/` 目录
-- **响应式网格**：根据屏幕尺寸自动调整列数
-- **懒加载**：使用 `loading="lazy"` 优化性能
-- **悬停效果**：图片放大和半透明遮罩
-
-### 5. SEO 优化
-
-- **元标签**：自动生成 OG、Twitter Card 等元标签
-- **Sitemap**：集成 `@astrojs/sitemap` 生成站点地图
-- **Canonical URLs**：设置规范链接避免重复内容
-- **文章结构化数据**：添加 `article:published_time` 等标记
-
-## 性能优化
-
-### 1. 静态生成
-
-- **预渲染**：所有页面在构建时预渲染为静态 HTML
-- **零 JavaScript**：默认情况下页面不包含 JavaScript，仅在需要交互时加载
-- **部分水合**：仅对交互式组件（如主题切换）进行客户端水合
-
-### 2. 资源优化
-
-- **图片优化**：使用适当的图片格式和尺寸
-- **字体优化**：使用 Google Fonts 预加载
-- **CSS 优化**：Tailwind CSS 自动 purge 未使用的样式
-- **代码分割**：按需加载组件
-
-### 3. 构建优化
-
-- **增量构建**：仅重新构建变更的文件
-- **缓存策略**：合理设置缓存头
-- **压缩**：自动压缩 HTML、CSS、JavaScript
-
-## 部署流程
-
-### 本地开发
-
-```bash
-# 安装依赖
-npm install
-
-# 启动开发服务器
-npm run dev
-# 访问 http://localhost:4321/portfolio
+export const collections = {
+  blog: blogCollection,
+};
 ```
 
-### 构建与部署
+### 4. 代码高亮
 
-```bash
-# 构建生产版本
-npm run build
+使用 Shiki 实现代码语法高亮，支持多种主题：
 
-# 部署到 GitHub Pages
-# 推送代码到 GitHub，GitHub Actions 自动部署
-# 访问 https://8bitcloudbot.github.io/portfolio/
+```astro
+---
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+    },
+  },
+});
+---
 ```
 
-## 技术亮点
+## 部署方案
 
-### 1. 现代化架构
+### GitHub Pages
 
-- **Astro Islands**：将页面划分为静态和动态区域，实现最佳性能
-- **Tailwind CSS 4**：使用最新的 `@theme` 指令和 CSS 变量
-- **React 19**：利用最新的 React 特性
+1. 配置 `astro.config.mjs`：
 
-### 2. 用户体验
+```javascript
+export default defineConfig({
+  site: 'https://yourusername.github.io',
+  base: '/your-repo-name',
+});
+```
 
-- **流畅动画**：页面加载和交互时的平滑过渡
-- **主题切换**：无闪烁的主题切换体验
-- **响应式设计**：在所有设备上的良好表现
-- **可访问性**：符合 Web 可访问性标准
+2. 创建 GitHub Actions 工作流：
 
-### 3. 可维护性
-
-- **模块化**：清晰的组件和目录结构
-- **类型安全**：TypeScript 类型检查
-- **文档完善**：详细的开发文档和内容管理指南
-- **自动化**：CI/CD 自动部署流程
-
-## 未来扩展
-
-1. **多语言支持**：添加国际化功能
-2. **评论系统**：集成 Disqus 或其他评论系统
-3. **搜索功能**：添加站内搜索
-4. **RSS 订阅**：生成博客 RSS  feed
-5. **访客统计**：集成 Google Analytics
-
-## 总结
-
-本项目展示了如何使用现代前端技术栈构建一个高性能、美观的个人作品集网站。通过 Astro 的静态生成能力、React 的交互性和 Tailwind CSS 的样式系统，实现了一个既快速又具有良好用户体验的网站。
-
-技术栈的选择和架构设计确保了网站的可扩展性和可维护性，为未来的功能扩展和内容更新奠定了基础。
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4
+```
 
 ---
 
-**技术栈**：Astro 6.x + React 19 + Tailwind CSS 4.x + MDX
-**部署**：GitHub Pages + GitHub Actions
-**访问地址**：https://8bitcloudbot.github.io/portfolio/
+## 结语
+
+个人作品集网站是展示技术能力和项目经验的重要窗口。选择合适的技术栈（Astro + React + Tailwind CSS）可以让开发者专注于内容而不是配置，快速搭建一个现代化、高性能的作品集网站。
+
+> **关键要点**：技术栈服务于内容，不是炫技。Astro + React + Tailwind CSS 是最佳组合，让开发者专注于内容而不是配置。
