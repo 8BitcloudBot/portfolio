@@ -1,369 +1,369 @@
-# Vincent Hu - Portfolio
+# Vincent Hu - 个人作品集
 
-A modern, high-performance personal website and technical blog built with **Astro**, **React**, **Tailwind CSS**, and **MDX**. Designed for developers who want a fast, SEO-friendly portfolio with multi-environment deployment support.
+一个现代化、高性能的个人网站与技术博客，基于 **Astro**、**React**、**Tailwind CSS** 和 **MDX** 构建。专为追求快速加载、SEO 友好且支持多环境部署的开发者设计。
 
-## 🚀 Live Demo
+## 🚀 在线预览
 
-| Environment | URL |
-|-------------|-----|
-| **Production** | [vincentbuilds.fun](https://vincentbuilds.fun) |
+| 环境 | 地址 |
+|------|------|
+| **生产环境** | [vincentbuilds.fun](https://vincentbuilds.fun) |
 | **GitHub Pages** | [8bitcloudbot.github.io/portfolio](https://8bitcloudbot.github.io/portfolio) |
 
-## ✨ Features
+## ✨ 功能特性
 
-### Core Features
+### 核心功能
 
-- **📝 Blog System** - Markdown/MDX blog with syntax highlighting, tags, and full-text search
-- **💼 Project Showcase** - Detailed project pages with MDX support for rich content
-- **📸 Photo Gallery** - Responsive image gallery with lazy loading
-- **🌙 Dark Mode** - Theme toggle with system preference detection and local storage persistence
-- **🔍 SEO Optimized** - Automatic sitemap generation, meta tags, Open Graph, and structured data
-- **📱 Responsive Design** - Mobile-first approach with Tailwind CSS breakpoints
-- **⚡ Performance** - Static site generation (SSG) with Astro for sub-second load times
+- **📝 博客系统** - 支持 Markdown/MDX，具备语法高亮、标签分类和全文搜索
+- **💼 项目展示** - 详细的项目页面，支持 MDX 富文本内容
+- **📸 照片画廊** - 响应式图片画廊，支持懒加载
+- **🌙 暗黑模式** - 主题切换，支持系统偏好检测和本地存储持久化
+- **🔍 SEO 优化** - 自动生成站点地图、meta 标签、Open Graph 和结构化数据
+- **📱 响应式设计** - 移动优先，基于 Tailwind CSS 断点系统
+- **⚡ 高性能** - Astro 静态站点生成（SSG），亚秒级加载速度
 
-### Technical Features
+### 技术特性
 
-- **Content Collections** - Type-safe content with Zod schema validation
-- **Component Islands** - React components hydrate only when needed (partial hydration)
-- **Image Optimization** - Automatic image optimization with Astro's built-in assets
-- **RSS Feed** - Auto-generated RSS feed for blog subscribers
-- **Accessibility** - WCAG 2.1 compliant with semantic HTML and ARIA labels
+- **内容集合** - 基于 Zod 模式验证的类型安全内容管理
+- **组件岛屿** - React 组件按需水合（部分水合策略）
+- **图片优化** - Astro 内置自动图片优化
+- **RSS 订阅** - 自动生成博客 RSS 订阅源
+- **无障碍访问** - 符合 WCAG 2.1 标准，使用语义化 HTML 和 ARIA 标签
 
-## 🛠️ Tech Stack
+## 🛠️ 技术栈
 
-### Core Technologies
+### 核心技术
 
-| Category | Technology | Purpose |
-|----------|-----------|---------|
-| Framework | [Astro 6.x](https://astro.build) | Static site generator with island architecture |
-| UI Components | [React 19](https://react.dev) | Interactive client-side components |
-| Styling | [Tailwind CSS 4.x](https://tailwindcss.com) | Utility-first CSS framework |
-| Content | [MDX](https://mdxjs.com/) | Markdown with JSX support for rich content |
-| Type Safety | [TypeScript](https://www.typescriptlang.org/) | Static type checking |
+| 类别 | 技术 | 用途 |
+|------|------|------|
+| 框架 | [Astro 6.x](https://astro.build) | 岛屿架构静态站点生成器 |
+| UI 组件 | [React 19](https://react.dev) | 交互式客户端组件 |
+| 样式 | [Tailwind CSS 4.x](https://tailwindcss.com) | 工具类优先的 CSS 框架 |
+| 内容 | [MDX](https://mdxjs.com/) | 支持 JSX 的 Markdown 扩展 |
+| 类型安全 | [TypeScript](https://www.typescriptlang.org/) | 静态类型检查 |
 
-### Integrations & Tools
+### 集成工具
 
-| Tool | Purpose |
-|------|---------|
-| [@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/) | Automatic sitemap generation |
-| [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) | MDX content support |
-| [@astrojs/react](https://docs.astro.build/en/guides/integrations-guide/react/) | React component integration |
-| [GitHub Actions](https://github.com/features/actions) | CI/CD automation |
+| 工具 | 用途 |
+|------|------|
+| [@astrojs/sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/) | 自动生成站点地图 |
+| [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) | MDX 内容支持 |
+| [@astrojs/react](https://docs.astro.build/en/guides/integrations-guide/react/) | React 组件集成 |
+| [GitHub Actions](https://github.com/features/actions) | CI/CD 自动化 |
 
-### Deployment Infrastructure
+### 部署基础设施
 
-| Component | Technology |
-|-----------|-----------|
-| Primary Server | Alibaba Cloud ECS + Nginx |
-| Backup Hosting | GitHub Pages |
+| 组件 | 技术 |
+|------|------|
+| 主服务器 | 阿里云 ECS + Nginx |
+| 备用托管 | GitHub Pages |
 | CI/CD | GitHub Actions |
-| SSL | Let's Encrypt |
+| SSL 证书 | Let's Encrypt |
 
-## 📦 Installation
+## 📦 安装
 
-### Prerequisites
+### 环境要求
 
-- **Node.js** >= 22.12.0 (recommended: use [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm) for version management)
-- **npm** >= 10.x or **pnpm** >= 9.x
-- **Git** for version control
+- **Node.js** >= 22.12.0（推荐使用 [nvm](https://github.com/nvm-sh/nvm) 或 [fnm](https://github.com/Schniz/fnm) 管理版本）
+- **npm** >= 10.x 或 **pnpm** >= 9.x
+- **Git** 版本控制
 
-### Quick Start
+### 快速开始
 
 ```bash
-# Clone the repository
+# 克隆仓库
 git clone https://github.com/8BitcloudBot/portfolio.git
 cd portfolio
 
-# Install dependencies
+# 安装依赖
 npm install
 
-# Start development server
+# 启动开发服务器
 npm run dev
 ```
 
-Visit `http://localhost:4321` to see the site.
+访问 `http://localhost:4321` 查看网站。
 
-### Alternative: Using pnpm
+### 使用 pnpm
 
 ```bash
-# Install pnpm if not installed
+# 安装 pnpm（如未安装）
 npm install -g pnpm
 
-# Install dependencies
+# 安装依赖
 pnpm install
 
-# Start development server
+# 启动开发服务器
 pnpm dev
 ```
 
-## 📁 Project Structure
+## 📁 项目结构
 
 ```
 portfolio/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml          # CI/CD workflow for multi-environment deployment
+│       └── deploy.yml          # CI/CD 多环境部署工作流
 ├── public/
-│   ├── photos/                 # Photo gallery images
-│   └── favicon.svg             # Site favicon
+│   ├── photos/                 # 照片画廊图片
+│   └── favicon.svg             # 网站图标
 ├── src/
 │   ├── components/
-│   │   ├── blog/               # Blog list & item components
-│   │   ├── icons/              # SVG icon components (inline SVG)
-│   │   ├── layout/             # Header, Footer, BackToTop, Navigation
-│   │   ├── projects/           # Project card & list components
-│   │   └── ui/                 # Shared UI components (SEO, ThemeToggle)
+│   │   ├── blog/               # 博客列表和文章组件
+│   │   ├── icons/              # SVG 图标组件（内联 SVG）
+│   │   ├── layout/             # 页头、页脚、返回顶部、导航
+│   │   ├── projects/           # 项目卡片和列表组件
+│   │   └── ui/                 # 共享 UI 组件（SEO、主题切换）
 │   ├── content/
-│   │   ├── blog/               # Blog posts (Markdown with frontmatter)
-│   │   └── projects/           # Project pages (MDX with frontmatter)
+│   │   ├── blog/               # 博客文章（Markdown + frontmatter）
+│   │   └── projects/           # 项目页面（MDX + frontmatter）
 │   ├── layouts/
-│   │   └── BaseLayout.astro    # Main layout wrapper
+│   │   └── BaseLayout.astro    # 主布局包装器
 │   ├── pages/
-│   │   ├── index.astro         # Homepage
-│   │   ├── about.astro         # About page
+│   │   ├── index.astro         # 首页
+│   │   ├── about.astro         # 关于页面
 │   │   ├── blog/
-│   │   │   ├── index.astro     # Blog listing page
-│   │   │   └── [slug].astro    # Dynamic blog post page
+│   │   │   ├── index.astro     # 博客列表页
+│   │   │   └── [slug].astro    # 动态博客文章页
 │   │   ├── projects/
-│   │   │   ├── index.astro     # Projects listing page
-│   │   │   └── [slug].astro    # Dynamic project page
-│   │   └── photos.astro        # Photo gallery page
+│   │   │   ├── index.astro     # 项目列表页
+│   │   │   └── [slug].astro    # 动态项目详情页
+│   │   └── photos.astro        # 照片画廊页
 │   ├── styles/
-│   │   └── global.css          # Global styles and Tailwind imports
-│   └── config.ts               # Site configuration (title, nav, social links)
-├── astro.config.ts             # Astro configuration (integrations, env)
-├── deploy.sh                   # Multi-environment deployment script
-├── tsconfig.json               # TypeScript configuration
-└── package.json                # Dependencies and scripts
+│   │   └── global.css          # 全局样式和 Tailwind 导入
+│   └── config.ts               # 站点配置（标题、导航、社交链接）
+├── astro.config.ts             # Astro 配置（集成、环境变量）
+├── deploy.sh                   # 多环境部署脚本
+├── tsconfig.json               # TypeScript 配置
+└── package.json                # 依赖和脚本
 ```
 
-### Key Files
+### 关键文件
 
-| File | Purpose |
-|------|---------|
-| `src/config.ts` | Site metadata, navigation, and social links |
-| `astro.config.ts` | Multi-environment configuration (production/github/development) |
-| `deploy.sh` | Local deployment script with environment switching |
-| `.github/workflows/deploy.yml` | GitHub Actions CI/CD pipeline |
+| 文件 | 用途 |
+|------|------|
+| `src/config.ts` | 站点元数据、导航和社交链接配置 |
+| `astro.config.ts` | 多环境配置（生产/GitHub/开发） |
+| `deploy.sh` | 本地部署脚本，支持环境切换 |
+| `.github/workflows/deploy.yml` | GitHub Actions CI/CD 流水线 |
 
-## 🗺️ Page Routes
+## 🗺️ 页面路由
 
-| Route | Page | Description |
-|-------|------|-------------|
-| `/` | Homepage | Landing page with featured content |
-| `/about` | About | Personal introduction and skills |
-| `/blog` | Blog List | All blog posts with pagination |
-| `/blog/[slug]` | Blog Post | Individual blog post (Markdown/MDX) |
-| `/projects` | Projects List | Portfolio projects overview |
-| `/projects/[slug]` | Project Detail | Individual project page (MDX) |
-| `/photos` | Photo Gallery | Image gallery with lightbox |
+| 路由 | 页面 | 说明 |
+|------|------|------|
+| `/` | 首页 | 包含精选内容的落地页 |
+| `/about` | 关于 | 个人介绍和技能 |
+| `/blog` | 博客列表 | 所有博客文章，支持分页 |
+| `/blog/[slug]` | 博客文章 | 单篇文章（Markdown/MDX） |
+| `/projects` | 项目列表 | 作品集项目概览 |
+| `/projects/[slug]` | 项目详情 | 单个项目页面（MDX） |
+| `/photos` | 照片画廊 | 图片画廊，支持灯箱效果 |
 
-## 📝 Content Management
+## 📝 内容管理
 
-### Adding a Blog Post
+### 添加博客文章
 
-Create a new `.md` file in `src/content/blog/`:
+在 `src/content/blog/` 目录创建新的 `.md` 文件：
 
 ```markdown
 ---
-title: "Your Post Title"
+title: "文章标题"
 pubDate: 2026-01-01
-description: "Brief description for SEO and previews"
-tags: ["tag1", "tag2", "tag3"]
-lang: "zh"  # or "en"
+description: "文章简介，用于 SEO 和预览"
+tags: ["标签1", "标签2", "标签3"]
+lang: "zh"  # 或 "en"
 ---
 
-Your content here...
+文章内容...
 ```
 
-### Adding a Project
+### 添加项目
 
-Create a new `.mdx` file in `src/content/projects/`:
+在 `src/content/projects/` 目录创建新的 `.mdx` 文件：
 
 ```mdx
 ---
-title: "Project Name"
-description: "Project description"
+title: "项目名称"
+description: "项目描述"
 pubDate: 2026-01-01
 tags: ["React", "TypeScript"]
 github: "https://github.com/username/repo"
 live: "https://example.com"
 ---
 
-Project details with MDX support...
+项目详情，支持 MDX 富文本...
 ```
 
-### Content Frontmatter Schema
+### 内容 Frontmatter 字段说明
 
-#### Blog Post
+#### 博客文章
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `title` | string | Yes | Post title |
-| `pubDate` | date | Yes | Publication date (YYYY-MM-DD) |
-| `description` | string | Yes | SEO description |
-| `tags` | string[] | Yes | Categorization tags |
-| `lang` | string | No | Language code (zh/en) |
+| 字段 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `title` | string | 是 | 文章标题 |
+| `pubDate` | date | 是 | 发布日期（YYYY-MM-DD） |
+| `description` | string | 是 | SEO 描述 |
+| `tags` | string[] | 是 | 分类标签 |
+| `lang` | string | 否 | 语言代码（zh/en） |
 
-#### Project
+#### 项目
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `title` | string | Yes | Project name |
-| `description` | string | Yes | Brief description |
-| `pubDate` | date | Yes | Publication date |
-| `tags` | string[] | Yes | Technology tags |
-| `github` | string | No | GitHub repository URL |
-| `live` | string | No | Live demo URL |
+| 字段 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `title` | string | 是 | 项目名称 |
+| `description` | string | 是 | 项目简介 |
+| `pubDate` | date | 是 | 发布日期 |
+| `tags` | string[] | 是 | 技术标签 |
+| `github` | string | 否 | GitHub 仓库地址 |
+| `live` | string | 否 | 在线演示地址 |
 
-## ⚡ Commands
+## ⚡ 命令
 
-### Development
+### 开发
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start local dev server at `localhost:4321` with hot reload |
-| `npm run build` | Build for production (default environment) |
-| `npm run preview` | Preview the production build locally |
+| 命令 | 说明 |
+|------|------|
+| `npm run dev` | 启动本地开发服务器（localhost:4321），支持热更新 |
+| `npm run build` | 构建生产版本（默认环境） |
+| `npm run preview` | 本地预览生产构建 |
 
-### Environment-Specific Builds
+### 环境构建
 
-| Command | Environment | Output |
-|---------|-------------|--------|
-| `npm run build:production` | Alibaba Cloud | `dist/` with root base path |
-| `npm run build:github` | GitHub Pages | `dist/` with `/portfolio` base path |
-| `npm run build:development` | Local | `dist/` with localhost base path |
+| 命令 | 环境 | 输出 |
+|------|------|------|
+| `npm run build:production` | 阿里云 | `dist/`，根路径 |
+| `npm run build:github` | GitHub Pages | `dist/`，`/portfolio` 路径 |
+| `npm run build:development` | 本地 | `dist/`，localhost 路径 |
 
-### Deployment
+### 部署
 
-| Command | Description |
-|---------|-------------|
-| `npm run deploy:production` | Build and deploy to Alibaba Cloud via SSH |
-| `npm run deploy:github` | Build and trigger GitHub Pages deployment |
-| `npm run deploy:all` | Deploy to both environments sequentially |
+| 命令 | 说明 |
+|------|------|
+| `npm run deploy:production` | 构建并通过 SSH 部署到阿里云 |
+| `npm run deploy:github` | 构建并触发 GitHub Pages 部署 |
+| `npm run deploy:all` | 依次部署到所有环境 |
 
-### Utility
+### 工具
 
-| Command | Description |
-|---------|-------------|
-| `npm run astro` | Run Astro CLI commands |
-| `npm run astro -- --help` | Show Astro CLI help |
+| 命令 | 说明 |
+|------|------|
+| `npm run astro` | 运行 Astro CLI 命令 |
+| `npm run astro -- --help` | 显示 Astro CLI 帮助 |
 
-## 🚀 Deployment
+## 🚀 部署
 
-This project supports **three-environment deployment** with automatic and manual triggers:
+本项目支持**三环境部署**，包含自动和手动触发方式：
 
-| Environment | URL | Trigger | Server |
-|-------------|-----|---------|--------|
-| **Local** | `http://localhost:4321` | `npm run dev` | Local machine |
-| **GitHub Pages** | [8bitcloudbot.github.io/portfolio](https://8bitcloudbot.github.io/portfolio) | Git push to `main` | GitHub Actions |
-| **Alibaba Cloud** | [vincentbuilds.fun](https://vincentbuilds.fun) | Manual trigger | Alibaba Cloud ECS + Nginx |
+| 环境 | 地址 | 触发方式 | 服务器 |
+|------|------|----------|--------|
+| **本地** | `http://localhost:4321` | `npm run dev` | 本地机器 |
+| **GitHub Pages** | [8bitcloudbot.github.io/portfolio](https://8bitcloudbot.github.io/portfolio) | 推送到 `main` 分支 | GitHub Actions |
+| **阿里云** | [vincentbuilds.fun](https://vincentbuilds.fun) | 手动触发 | 阿里云 ECS + Nginx |
 
-### Deployment Methods
+### 部署方式
 
-#### 1. Local Deployment (Recommended for testing)
+#### 1. 本地部署（推荐用于测试）
 
 ```bash
-# Development server with hot reload
+# 启动开发服务器（热更新）
 npm run dev
 
-# Build and preview production version
+# 构建并预览生产版本
 npm run build:production
 npm run preview
 ```
 
-#### 2. GitHub Pages (Automatic)
+#### 2. GitHub Pages（自动）
 
-Push to `main` branch triggers automatic deployment via GitHub Actions:
+推送到 `main` 分支将自动触发 GitHub Actions 部署：
 
 ```bash
 git add .
-git commit -m "feat: your changes"
+git commit -m "feat: 你的更改"
 git push origin main
-# GitHub Actions automatically builds and deploys
+# GitHub Actions 自动构建并部署
 ```
 
-#### 3. Alibaba Cloud (Manual)
+#### 3. 阿里云（手动）
 
 ```bash
-# Deploy to production server
+# 部署到生产服务器
 npm run deploy:production
 
-# Or use deploy.sh directly
+# 或直接使用 deploy.sh
 ./deploy.sh production
 ```
 
-#### 4. Deploy to All Environments
+#### 4. 部署到所有环境
 
 ```bash
 npm run deploy:all
-# Builds and deploys to both GitHub Pages and Alibaba Cloud
+# 构建并依次部署到 GitHub Pages 和阿里云
 ```
 
-### GitHub Actions Workflow
+### GitHub Actions 工作流
 
-The CI/CD pipeline supports:
+CI/CD 流水线支持：
 
-- **Automatic deployment** on push to `main` (GitHub Pages only)
-- **Manual deployment** with environment selection:
-  - `github` - Deploy to GitHub Pages only
-  - `production` - Deploy to Alibaba Cloud only
-  - `all` - Deploy to both environments
+- **自动部署**：推送到 `main` 分支时自动部署到 GitHub Pages
+- **手动部署**：可选择部署环境：
+  - `github` - 仅部署到 GitHub Pages
+  - `production` - 仅部署到阿里云
+  - `all` - 同时部署到两个环境
 
-To trigger manual deployment:
-1. Go to repository **Actions** tab
-2. Select **"Deploy to Multiple Environments"** workflow
-3. Click **"Run workflow"**
-4. Choose environment and click **"Run workflow"**
+触发手动部署：
+1. 进入仓库的 **Actions** 标签页
+2. 选择 **"Deploy to Multiple Environments"** 工作流
+3. 点击 **"Run workflow"**
+4. 选择环境后点击 **"Run workflow"**
 
-### Environment Variables
+### 环境变量
 
-Create `.deploy.env` for local deployments (gitignored):
+本地部署需创建 `.deploy.env` 文件（已加入 .gitignore）：
 
 ```bash
-# Alibaba Cloud Configuration
-ALIYUN_SERVER_HOST=your-server-ip
+# 阿里云配置
+ALIYUN_SERVER_HOST=服务器IP
 ALIYUN_SERVER_USER=root
 ALIYUN_DEPLOY_PATH=/var/www/vincentbuilds
 ```
 
-For GitHub Actions, configure these secrets in repository settings:
-- `ALIYUN_SSH_KEY` - SSH private key for Alibaba Cloud
-- `ALIYUN_SERVER_HOST` - Server IP address
-- `ALIYUN_SERVER_USER` - Server username
-- `ALIYUN_DEPLOY_PATH` - Deployment path on server
+GitHub Actions 需在仓库设置中配置以下 Secrets：
+- `ALIYUN_SSH_KEY` - 阿里云服务器 SSH 私钥
+- `ALIYUN_SERVER_HOST` - 服务器 IP 地址
+- `ALIYUN_SERVER_USER` - 服务器用户名
+- `ALIYUN_DEPLOY_PATH` - 服务器部署路径
 
-For detailed deployment instructions, see [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md).
-For site operations guide, see [OPERATIONS_GUIDE.md](./OPERATIONS_GUIDE.md).
+详细部署说明请参阅 [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)。
+站点运维指南请参阅 [OPERATIONS_GUIDE.md](./OPERATIONS_GUIDE.md)。
 
-## 🔧 Configuration
+## 🔧 配置
 
-### Site Configuration
+### 站点配置
 
-Edit `src/config.ts` to customize site metadata:
+编辑 `src/config.ts` 自定义站点元数据：
 
 ```typescript
 export const SITE = {
-  title: "Your Name",
-  description: "Your site description",
-  author: "Your Name",
+  title: "你的名字",
+  description: "站点描述",
+  author: "你的名字",
   email: "your.email@example.com",
   github: "https://github.com/yourusername",
   nav: [
-    { name: "Blog", path: "/blog", icon: "article" },
-    { name: "Projects", path: "/projects", icon: "lightbulb" },
-    // Add more navigation items...
+    { name: "博客", path: "/blog", icon: "article" },
+    { name: "项目", path: "/projects", icon: "lightbulb" },
+    // 添加更多导航项...
   ],
   social: [
     { name: "GitHub", url: "https://github.com/yourusername", icon: "github" },
-    // Add more social links...
+    // 添加更多社交链接...
   ],
 };
 ```
 
-### Multi-Environment Configuration
+### 多环境配置
 
-The `astro.config.ts` supports environment-specific settings:
+`astro.config.ts` 支持环境相关配置：
 
 ```typescript
 const environments = {
@@ -382,97 +382,97 @@ const environments = {
 };
 ```
 
-## 🧪 Testing
+## 🧪 测试
 
-### Local Testing Checklist
+### 本地测试清单
 
-- [ ] Run `npm run dev` and test all pages
-- [ ] Test dark mode toggle
-- [ ] Verify responsive design on mobile
-- [ ] Check blog post rendering
-- [ ] Test navigation links
-- [ ] Verify images load correctly
+- [ ] 运行 `npm run dev` 并测试所有页面
+- [ ] 测试暗黑模式切换
+- [ ] 验证移动端响应式设计
+- [ ] 检查博客文章渲染
+- [ ] 测试导航链接
+- [ ] 验证图片加载
 
-### Build Testing
+### 构建测试
 
 ```bash
-# Test production build
+# 测试生产构建
 npm run build:production
 npm run preview
 
-# Test GitHub Pages build
+# 测试 GitHub Pages 构建
 npm run build:github
 npm run preview
 ```
 
-### Performance Testing
+### 性能测试
 
-Use [Lighthouse](https://developers.google.com/web/tools/lighthouse) to verify:
-- Performance score > 90
-- Accessibility score > 90
-- SEO score > 90
+使用 [Lighthouse](https://developers.google.com/web/tools/lighthouse) 验证：
+- 性能评分 > 90
+- 无障碍评分 > 90
+- SEO 评分 > 90
 
-## 📚 Documentation
+## 📚 文档
 
-| Document | Description |
-|----------|-------------|
-| [README.md](./README.md) | This file - Project overview and setup |
-| [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) | Detailed deployment instructions |
-| [OPERATIONS_GUIDE.md](./OPERATIONS_GUIDE.md) | Site operations and maintenance |
+| 文档 | 说明 |
+|------|------|
+| [README.md](./README.md) | 本文档 - 项目概览和使用说明 |
+| [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) | 详细部署指南 |
+| [OPERATIONS_GUIDE.md](./OPERATIONS_GUIDE.md) | 站点运维指南 |
 
-## 🤝 Contributing
+## 🤝 贡献
 
-Contributions are welcome! Please follow these steps:
+欢迎贡献！请遵循以下步骤：
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'feat: add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
+1. **Fork** 本仓库
+2. **创建** 功能分支（`git checkout -b feature/amazing-feature`）
+3. **提交** 更改（`git commit -m 'feat: add amazing feature'`）
+4. **推送** 到分支（`git push origin feature/amazing-feature`）
+5. **发起** Pull Request
 
-### Development Guidelines
+### 开发规范
 
-- Follow existing code style and conventions
-- Add TypeScript types for new components
-- Test changes locally before committing
-- Write meaningful commit messages (use [Conventional Commits](https://www.conventionalcommits.org/))
+- 遵循现有代码风格和规范
+- 为新组件添加 TypeScript 类型
+- 提交前在本地测试更改
+- 使用 [Conventional Commits](https://www.conventionalcommits.org/) 规范编写提交信息
 
-## 🐛 Troubleshooting
+## 🐛 问题排查
 
-### Common Issues
+### 常见问题
 
-| Issue | Solution |
-|-------|----------|
-| Build fails with Node.js error | Ensure Node.js >= 22.12.0 (`node -v`) |
-| Images not loading | Check `public/` directory and file paths |
-| GitHub Pages 404 | Verify `base` path in `astro.config.ts` |
-| Deployment fails | Check SSH keys and server configuration |
+| 问题 | 解决方案 |
+|------|----------|
+| 构建失败，Node.js 报错 | 确保 Node.js >= 22.12.0（`node -v`） |
+| 图片无法加载 | 检查 `public/` 目录和文件路径 |
+| GitHub Pages 404 | 验证 `astro.config.ts` 中的 `base` 路径 |
+| 部署失败 | 检查 SSH 密钥和服务器配置 |
 
-### Getting Help
+### 获取帮助
 
-- Check [GitHub Issues](https://github.com/8BitcloudBot/portfolio/issues) for known issues
-- Review [Astro Documentation](https://docs.astro.build) for framework questions
-- Open a new issue with detailed error information
+- 查看 [GitHub Issues](https://github.com/8BitcloudBot/portfolio/issues) 了解已知问题
+- 参阅 [Astro 文档](https://docs.astro.build) 解决框架相关问题
+- 提交新 Issue 并附上详细错误信息
 
-## 📄 License
+## 📄 许可证
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+本项目基于 **MIT 许可证** - 详见 [LICENSE](LICENSE) 文件。
 
-You are free to use this project as a template for your own portfolio. Attribution is appreciated but not required.
+你可以自由使用本项目作为个人作品集模板。欢迎注明出处，但非必须。
 
-## 🙏 Acknowledgments
+## 🙏 致谢
 
-- [Astro](https://astro.build) - The web framework for content-driven websites
-- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
-- [React](https://react.dev) - JavaScript library for building user interfaces
-- [Heroicons](https://heroicons.com) - Beautiful hand-crafted SVG icons
+- [Astro](https://astro.build) - 内容驱动的 Web 框架
+- [Tailwind CSS](https://tailwindcss.com) - 工具类优先的 CSS 框架
+- [React](https://react.dev) - 构建用户界面的 JavaScript 库
+- [Heroicons](https://heroicons.com) - 精美的手工 SVG 图标
 
-## 📧 Contact
+## 📧 联系方式
 
-- **Email**: 17889786156@163.com
+- **邮箱**: 17889786156@163.com
 - **GitHub**: [@8BitcloudBot](https://github.com/8BitcloudBot)
-- **Website**: [vincentbuilds.fun](https://vincentbuilds.fun)
+- **网站**: [vincentbuilds.fun](https://vincentbuilds.fun)
 
 ---
 
-**Built with ❤️ using Astro, React, and Tailwind CSS**
+**使用 Astro、React 和 Tailwind CSS 精心打造 ❤️**
