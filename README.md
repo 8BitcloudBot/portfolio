@@ -59,6 +59,10 @@
 | CI/CD | GitHub Actions |
 | SSL 证书 | Let's Encrypt |
 
+## 🏗️ 系统架构
+
+![系统架构图](./public/architecture.svg)
+
 ## 📦 安装
 
 ### 环境要求
